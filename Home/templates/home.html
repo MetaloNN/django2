@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block contenido %}
+
+<div class='p-4' style='color:yellow;'>
+    <h1>Bienvenido</h1>
+    <h2>aquí podras ver la carta para realizar tu pedido</h2>
+    <h2>cuando estes listo solo llama a un mesero y el atendera tu pedido.</h2>
+    <br>
+    <img class="position-relative start-50" src={% static 'images/home.jpeg' %}>
+
+</div>
+
+{% endblock contenido %}

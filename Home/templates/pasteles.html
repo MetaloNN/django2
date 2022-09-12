@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Pasteles{% endblock title %}
+
+{% block contenido %}
+
+{% for pastel in pasteles %}
+<div class="col-4 p-4">
+    <div class="card bg-warning" style="width: 20rem;">
+        <div class="card-body">
+            <img src="/Home/resources/images/pasteles/{{ pastel.img }}" class="card-img-top">
+            <div class="mt-3">
+                <h5 class="card-title">{{ pastel.nombre }}</h5>
+                <p class="card-text">{{ pastel.descripcion }}</p>
+                <p class="card-text">Valor: ${{ pastel.valor }} pesos.</p>
+            </div>
+        </div>
+    </div>
+</div>  
+{% endfor %}
+
+{% endblock contenido %}

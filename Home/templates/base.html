@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Metal | {% block title %} {% endblock %}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  {% load static %}
+  <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+</head>
+
+<body style="background-color:#1c1c1c;">
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-danger" style="position: fixed; left: 0; up: 0; width: 100%; z-index:900;">
+          <div class="container">
+            <a class="navbar-brand" href="{% url 'Home' %}">Cafe Metal</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'cafe' %}" aria-current="page">Cafe <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'pasteles' %}">Pasteles</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'artesanales' %}" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Helados</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="{% url 'artesanales' %}">Artesanales</a>
+                            <a class="dropdown-item" href="{% url 'marcas' %}">Marcas</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+      </div>
+    </nav>
+    
+  </header>
+  <main>
+    
+
+    <div class="container p-5"> 
+      <div class="row">
+        {% block contenido %} {% endblock %}    
+      </div>
+    </div>
+    <br>
+    
+  </main>
+  <footer class="bg-danger sticky-bottom" style="position: fixed; left: 0; bottom: 0; width: 100%;">
+    <div class="p-3">
+      <p class="text-center">Nicolás Herrera Ayala</p>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}">
+
+  </script>
+</body>
+
+</html>

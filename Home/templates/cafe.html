@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block title %} Cafe {% endblock %} 
+
+{% block contenido %}
+
+{% for cafe in cafe %}
+    <div class="col-4 p-4">
+      <div class="card bg-warning" style="width: 20rem;">
+        <div class="card-body">
+            <img src="/Home/resources/images/cafe/{{ cafe.img }}" class="card-img-top">
+            <div class="mt-3">
+            <h5 class="card-title">{{ cafe.name }}</h5>
+            <p class="card-text">{{ cafe.descripcion }}</p>
+            <p class="card-text">Valor: ${{ cafe.valor }} pesos.</p>
+            </div>
+          </div>
+      </div>
+    </div>  
+{% endfor %}
+
+{% endblock %}
