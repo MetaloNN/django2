@@ -22,13 +22,19 @@ def pasteles(request):
 
     pasteles = [{'nombre': 'Tres leches', 'img':'tres.jpg', 'valor': 3000, 'descripcion':'Trozo de torta tres leches'},
                 {'nombre': 'Mil hojas', 'img':'mil.jpg', 'valor': 3000, 'descripcion':'Trozo de torta mil hojas'},
+                {'nombre': 'Chocolate', 'img':'chocolate.jpg', 'valor': 3000, 'descripcion':'Trozo de torta de chocolate'},
                 ]
     return render(request, 'pasteles.html', {
         'pasteles': pasteles
     })
 
 def artesanales(request):
-    return render(request, 'artesanales.html')
+
+    helados = [{'name': 'Chocolate', 'img':'chocolate.jpg', 'valor': 8000, 'descripcion':'Helado de sabor chocolate artesanal'},
+                {'name': 'Limon', 'img':'limon.jpg', 'valor': 8000, 'descripcion':'Helado de sabor limon artesanal'},
+                {'name': 'Vainilla', 'img':'vainilla.jpg', 'valor': 8000, 'descripcion':'Helado de sabor vainilla artesanal'},
+    ]
+    return render(request, 'artesanales.html', {'helados': helados})
 
 def marcas(request):
     return render(request, 'marcas.html')

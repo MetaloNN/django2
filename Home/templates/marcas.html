@@ -1,1 +1,35 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Helados{% endblock title %}
+
+{% block contenido %}
+
+<div class="col-4 p-4">
+    <div class="card bg-warning" style="width: 20rem;">
+      <div class="card-body">
+          <img src={% static 'images/helados/marcas/oikos.png' %} class="card-img-top">
+          <div class="mt-3">
+          <h5 class="card-title">Helado oikos</h5>
+          <p class="card-text">Helado oikos sabor caramelo avellana</p>
+          <p class="card-text">Valor: $10.000 pesos.</p>
+          </div>
+        </div>
+    </div>
+  </div> 
+
+  <div class="col-4 p-4">
+    <div class="card bg-warning" style="width: 20rem;">
+      <div class="card-body">
+          <img src={% static 'images/helados/marcas/chocolate.png' %} class="card-img-top">
+          <div class="mt-3">
+          <h5 class="card-title">Helado San Francisco</h5>
+          <p class="card-text">Helado San Francisco sabor chocolate nuss</p>
+          <p class="card-text">Valor: $8.000 pesos.</p>
+          </div>
+        </div>
+    </div>
+  </div>   
+
+
+{% endblock contenido %}
