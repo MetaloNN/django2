@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request, 'home.html')
+    return render(request, './Home/vistas/home.html')
 
 def cafe(request):
 
@@ -14,7 +14,7 @@ def cafe(request):
                 {'name': 'Expreso', 'img': 'expreso.webp', 'valor': 1500, 'descripcion': 'El Expreso es un corto de café concentrado'},
              ]
 
-    return render(request, 'cafe.html', {
+    return render(request, './Home/vistas/cafe.html', {
         'cafe': cafe
     })
 
@@ -24,7 +24,7 @@ def pasteles(request):
                 {'nombre': 'Mil hojas', 'img':'mil.jpg', 'valor': 3000, 'descripcion':'Trozo de torta mil hojas'},
                 {'nombre': 'Chocolate', 'img':'chocolate.jpg', 'valor': 3000, 'descripcion':'Trozo de torta de chocolate'},
                 ]
-    return render(request, 'pasteles.html', {
+    return render(request, './Home/vistas/pasteles.html', {
         'pasteles': pasteles
     })
 
@@ -34,7 +34,7 @@ def artesanales(request):
                 {'name': 'Limon', 'img':'limon.jpg', 'valor': 8000, 'descripcion':'Helado de sabor limon artesanal'},
                 {'name': 'Vainilla', 'img':'vainilla.jpg', 'valor': 8000, 'descripcion':'Helado de sabor vainilla artesanal'},
     ]
-    return render(request, 'artesanales.html', {'helados': helados})
+    return render(request, './Home/vistas/artesanales.html', {'helados': helados})
 
 def marcas(request):
-    return render(request, 'marcas.html')
+    return render(request, './Home/vistas/marcas.html')
